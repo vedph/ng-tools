@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@myrmidon/ng-tools": [
+        "dist/myrmidon/ng-tools/myrmidon-ng-tools",
+        "dist/myrmidon/ng-tools"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

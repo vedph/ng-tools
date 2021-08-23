@@ -1,0 +1,23 @@
+{
+  "name": "@myrmidon/ng-tools",
+  "version": "0.0.1",
+  "description": "Essential general-purpose tools for Angular apps.",
+  "keywords": [
+    "local-storage", "environment", "error", "roman numbers", "deep copy", "safe html"
+  ],
+  "homepage": "https://github.com/Myrmex/ng-tools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Myrmex/ng-tools"
+  },
+  "author": {
+    "name": "Daniele Fusi"
+  },
+  "peerDependencies": {
+    "@angular/common": "^12.1.0",
+    "@angular/core": "^12.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.2.0"
+  }
+}
