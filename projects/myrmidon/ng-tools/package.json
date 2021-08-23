@@ -5,10 +5,10 @@
   "keywords": [
     "local-storage", "environment", "error", "roman numbers", "deep copy", "safe html"
   ],
-  "homepage": "https://github.com/Myrmex/ng-tools",
+  "homepage": "https://github.com/vedph/ng-tools/tree/master/projects/myrmidon/ng-tools",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Myrmex/ng-tools"
+    "url": "https://github.com/vedph/ng-tools"
   },
   "author": {
     "name": "Daniele Fusi"
