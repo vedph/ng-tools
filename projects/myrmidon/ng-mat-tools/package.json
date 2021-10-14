@@ -1,6 +1,6 @@
 {
   "name": "@myrmidon/ng-mat-tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Essential components for Angular Material apps.",
   "keywords": [
     "dialog service"

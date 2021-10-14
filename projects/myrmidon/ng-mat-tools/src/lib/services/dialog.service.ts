@@ -15,15 +15,17 @@ import { ConfirmDialogComponent } from '../components/confirm-dialog/confirm-dia
  * the dialog is closed.
  */
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DialogService {
+  constructor(private dialog: MatDialog) {}
 
-  constructor(private dialog: MatDialog) { }
-
-  public confirm(title: string, prompt: string, ok = 'yes', cancel = 'no'):
-    Observable<boolean> {
-
+  public confirm(
+    title: string,
+    prompt: string,
+    ok = 'yes',
+    cancel = 'no'
+  ): Observable<boolean> {
     let dialogRef: MatDialogRef<ConfirmDialogComponent>;
 
     dialogRef = this.dialog.open(ConfirmDialogComponent);
