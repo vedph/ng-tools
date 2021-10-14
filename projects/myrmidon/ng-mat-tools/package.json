@@ -1,9 +1,22 @@
 {
   "name": "@myrmidon/ng-mat-tools",
   "version": "0.0.1",
+  "description": "Essential components for Angular Material apps.",
+  "keywords": [
+    "dialog service"
+  ],
+  "homepage": "https://github.com/vedph/ng-tools/tree/master/projects/myrmidon/ng-tools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vedph/ng-tools"
+  },
+  "author": {
+    "name": "Daniele Fusi"
+  },
   "peerDependencies": {
     "@angular/common": "^12.1.0",
-    "@angular/core": "^12.1.0"
+    "@angular/core": "^12.1.0",
+    "@angular/material": "^12.2.9"
   },
   "dependencies": {
     "tslib": "^2.2.0"
