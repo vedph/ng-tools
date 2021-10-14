@@ -3,6 +3,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@myrmidon/ng-mat-tools": [
+        "dist/myrmidon/ng-mat-tools/myrmidon-ng-mat-tools",
+        "dist/myrmidon/ng-mat-tools"
+      ],
       "@myrmidon/ng-tools": [
         "dist/myrmidon/ng-tools/myrmidon-ng-tools",
         "dist/myrmidon/ng-tools"
