@@ -22,3 +22,11 @@ export interface PagingOptions {
   value?: T;
   error?: string;
 }
+
+/**
+ * Generic information about an error.
+ */
+export interface ErrorInfo {
+  text: string;
+  payload?: any;
+}
