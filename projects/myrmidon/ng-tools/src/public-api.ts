@@ -2,6 +2,7 @@
  * Public API Surface of ng-tools
  */
 
+export * from './lib/directives/auto-focus.directive';
 export * from './lib/pipes/safe-html.pipe';
 export * from './lib/services/env.service';
 export * from './lib/services/env.service.provider';
