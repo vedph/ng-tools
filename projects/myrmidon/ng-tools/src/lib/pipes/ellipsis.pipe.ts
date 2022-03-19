@@ -5,7 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
  * either at limit or at some position before/after it
  * within an extent of 10% of the specified limit,
  * according to the delimiter characters found in that
- * span.
+ * span. Example:
+ *   myText | ellipsis:50:true:'!?.;:,':' ...'
+ * or just:
+ *   myText | ellipsis.
  */
 @Pipe({
   name: 'ellipsis',
@@ -17,15 +20,29 @@ export class EllipsisPipe implements PipeTransform {
     limit: number,
     delims: string
   ): number {
-    if (delims.includes(text[index])) {
-      return index;
+    if (delims.includes(text.charAt(index))) {
+      return index + 1;
     }
     for (let i = -limit; i <= limit; i++) {
-      if (delims.includes(text[i])) {
-        return i;
+      if (delims.includes(text.charAt(index + i))) {
+        return index + i + 1;
       }
     }
     return index;
+  }
+
+  private appendSuffix(
+    text: string,
+    suffix: string | undefined | null
+  ): string {
+    if (!suffix?.length) {
+      return text;
+    }
+    const m = /^(\s+)/.exec(suffix);
+    if (m) {
+      return text.substring(0, text.length - m[1].length) + suffix;
+    }
+    return text + suffix;
   }
 
   /**
@@ -36,8 +53,9 @@ export class EllipsisPipe implements PipeTransform {
    * @param limit The maximum count of characters.
    * @param smart True to try cut at a delimiter around limit.
    * @param delims A string with all the delimiter characters.
-   * @param ellipsis The ellipsis suffix to append to the end
-   * of the result.
+   * @param suffix The suffix to append to the end of the result.
+   * If the suffix starts with a whitespace, the resulting text
+   * is trimmed at end before appending this suffix.
    * @returns The string, cut if exceeding limit.
    */
   transform(
@@ -45,7 +63,7 @@ export class EllipsisPipe implements PipeTransform {
     limit = 50,
     smart = true,
     delims = '!?.;:,',
-    ellipsis = '...'
+    suffix = ' ...'
   ): string | null {
     if (!value) {
       return null;
@@ -55,9 +73,9 @@ export class EllipsisPipe implements PipeTransform {
     }
     if (smart) {
       let i = this.findDelimIndexWithin(value, limit, limit / 10, delims);
-      return value.substring(0, i) + ellipsis;
+      return this.appendSuffix(value.substring(0, i), suffix);
     } else {
-      return value.substring(0, limit) + ellipsis;
+      return this.appendSuffix(value.substring(0, limit), suffix);
     }
   }
 }
