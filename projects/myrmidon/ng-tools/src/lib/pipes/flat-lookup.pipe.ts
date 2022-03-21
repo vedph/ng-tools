@@ -35,7 +35,7 @@ export class FlatLookupPipe implements PipeTransform {
    */
   transform(
     value: string | number | undefined | null,
-    map: Array<any> | Object,
+    map: Array<any> | Object | undefined | null,
     keyName = 'id',
     valueName = 'label',
     fallback?: string
