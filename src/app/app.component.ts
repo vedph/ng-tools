@@ -16,8 +16,8 @@ export class AppComponent {
   public arrMap: Pair[];
   public key: string;
 
-  public text: FormControl;
-  public limit: FormControl;
+  public text: FormControl<string | null>;
+  public limit: FormControl<number>;
   public form: FormGroup;
 
   constructor(formBuilder: FormBuilder) {
@@ -46,12 +46,12 @@ export class AppComponent {
     // form
     this.text = formBuilder.control(
       'This is a sample text, used to test the ellipsis pipe. ' +
-      'You can try with different texts, or change the limit.'
+        'You can try with different texts, or change the limit.'
     );
-    this.limit = formBuilder.control(15);
+    this.limit = formBuilder.control(15, { nonNullable: true });
     this.form = formBuilder.group({
       text: this.text,
-      limit: this.limit
+      limit: this.limit,
     });
   }
 }

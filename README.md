@@ -6,4 +6,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## History
 
-2022-01-05: added `autoFocus` directive.
+### 0.1.0
+
+- 2022-06-10: upgraded to Angular 14.
+
+### 0.0.x
+
+- 2022-01-05: added `autoFocus` directive.
