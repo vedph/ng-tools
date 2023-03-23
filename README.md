@@ -6,6 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## History
 
+- 2023-03-23: added join pipe.
+
 ### 1.0.0
 
 - 2022-11-22: upgraded to Angular 15.

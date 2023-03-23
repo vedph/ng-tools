@@ -5,6 +5,7 @@
 export * from './lib/directives/auto-focus.directive';
 export * from './lib/pipes/ellipsis.pipe';
 export * from './lib/pipes/flat-lookup.pipe';
+export * from './lib/pipes/join.pipe';
 export * from './lib/pipes/safe-html.pipe';
 export * from './lib/services/env.service';
 export * from './lib/services/env.service.provider';
