@@ -1,6 +1,6 @@
 {
   "name": "@myrmidon/ng-mat-tools",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Essential components for Angular Material apps.",
   "keywords": [
     "dialog service"
@@ -14,11 +14,11 @@
     "name": "Daniele Fusi"
   },
   "peerDependencies": {
-    "@angular/common": "^15.0.0",
-    "@angular/core": "^15.0.0",
-    "@angular/material": "^15.0.0"
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0",
+    "@angular/material": "^16.0.0"
   },
   "dependencies": {
-    "tslib": "^2.2.0"
+    "tslib": "^2.5.0"
   }
 }

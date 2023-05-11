@@ -4,8 +4,21 @@ Essential Angular tools extracted from most of my Angular stuff in this repo.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
+## Publish
+
+Ensure to update version numbers in packages, then:
+
+```ps1
+npm run build-lib
+ng build
+./publish.bat
+```
+
 ## History
 
+### 2.0.0
+
+- 2023-05-11: upgraded to Angular 16.
 - 2023-03-23:
   - added join pipe.
   - updated Angular.
