@@ -16,6 +16,12 @@ ng build
 
 ## History
 
+### 2.0.1
+
+- 2023-07-27:
+  - updated Angular.
+  - made `strictMinLengthValidator` compatible with `FormArray`.
+
 ### 2.0.0
 
 - 2023-05-11: upgraded to Angular 16.

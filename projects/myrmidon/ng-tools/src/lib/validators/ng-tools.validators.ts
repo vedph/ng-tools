@@ -1,4 +1,9 @@
-import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+import {
+  AbstractControl,
+  FormArray,
+  ValidationErrors,
+  ValidatorFn,
+} from '@angular/forms';
 
 // https://github.com/angular/angular/blob/3b7d4ebbd6445364889d61b7b1b1c65206534d34/packages/forms/src/validators.ts
 // https://indepth.dev/posts/1319/the-best-way-to-implement-custom-validators
@@ -15,7 +20,8 @@ export class NgToolsValidators {
   }
 
   /**
-   * Validate an array or string for a minimum required length.
+   * Validate an array or string or FormArray for a minimum required
+   * length.
    * Differently from the standard minLength validator, this does
    * not exclude 0 from the values to be checked. The standard
    * validator instead does not validate the value if this is 0.
@@ -26,12 +32,22 @@ export class NgToolsValidators {
    */
   public static strictMinLengthValidator(minLength: number): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
-      // don't validate values without `length` property
-      if (!this.hasValidLength(control.value)) {
-        return null;
+      // don't validate values without length property,
+      // except for FormArray instances, where we validate its length
+      // (=number of children controls, assuming that the client
+      // has added a control in the array -usually a FormGroup- for each
+      // item to edit)
+      let length: number;
+      if (control instanceof FormArray) {
+        length = (control as FormArray).length;
+      } else {
+        if (!this.hasValidLength(control.value)) {
+          return null;
+        }
+        length = control.value.length;
       }
 
-      return control.value.length < minLength
+      return length < minLength
         ? {
             minlength: {
               requiredLength: minLength,
