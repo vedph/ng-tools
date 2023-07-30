@@ -11,6 +11,7 @@ export * from './lib/services/env.service';
 export * from './lib/services/env.service.provider';
 export * from './lib/services/error.service';
 export * from './lib/services/local-storage.service';
+export * from './lib/services/ram-storage.service';
 export * from './lib/services/window-ref.service';
 export * from './lib/validators/ng-tools.validators';
 export * from './lib/functions';

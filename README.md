@@ -16,6 +16,10 @@ ng build
 
 ## History
 
+### 2.0.2
+
+- 2023-07-30: added generic RAM storage.
+
 ### 2.0.1
 
 - 2023-07-27:
