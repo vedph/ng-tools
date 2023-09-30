@@ -16,6 +16,10 @@ ng build
 
 ## History
 
+### 2.0.3
+
+- 2023-09-30: added `colorToContrast` and `stringToColor` pipes.
+
 ### 2.0.2
 
 - 2023-07-30: added generic RAM storage.

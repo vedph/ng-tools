@@ -1,6 +1,6 @@
 {
   "name": "@myrmidon/ng-tools",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Essential general-purpose tools for Angular apps.",
   "keywords": [
     "local-storage", "environment", "error", "roman numbers", "deep copy", "safe html"

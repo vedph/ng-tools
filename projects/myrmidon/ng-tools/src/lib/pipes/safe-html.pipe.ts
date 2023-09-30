@@ -5,20 +5,25 @@ import {
   SafeStyle,
   SafeScript,
   SafeUrl,
-  SafeResourceUrl
+  SafeResourceUrl,
 } from '@angular/platform-browser';
 
 // https://github.com/SwarnaKishore/angular-safe-pipe/blob/master/src/app/safe.pipe.ts
 
+/**
+ * HTML sanitizer pipe. Usage: "value | safeHtml".
+ * You can specify a type of safe value as a parameter: html, style, script, url,
+ * resourceUrl.
+ */
 @Pipe({
-  name: 'safeHtml'
+  name: 'safeHtml',
 })
 export class SafeHtmlPipe implements PipeTransform {
   constructor(protected sanitizer: DomSanitizer) {}
 
   public transform(
     value: any,
-    type: string
+    type = 'html'
   ): SafeHtml | SafeStyle | SafeScript | SafeUrl | SafeResourceUrl {
     switch (type) {
       case 'html':
