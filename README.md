@@ -16,6 +16,10 @@ ng build
 
 ## History
 
+### 3.0.0
+
+- 2023-11-09: updated to Angular 17.
+
 ### 2.0.3
 
 - 2023-09-30: added `colorToContrast` and `stringToColor` pipes.
