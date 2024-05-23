@@ -16,6 +16,12 @@ ng build
 
 ## History
 
+### 3.1.0
+
+- 2024-05-23:
+  - ⚠️ updated to Angular 18, all versions bumped to 3.1.0, and their peer dependencies to Angular 18.
+  - updated to new flow syntax (`ng g @angular/core:control-flow`).
+
 ### 3.0.0
 
 - 2023-11-09: updated to Angular 17.
