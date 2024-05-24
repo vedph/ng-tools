@@ -16,6 +16,10 @@ ng build
 
 ## History
 
+### 3.1.1
+
+- 2024-05-24: better error handling in error service.
+
 ### 3.1.0
 
 - 2024-05-23:

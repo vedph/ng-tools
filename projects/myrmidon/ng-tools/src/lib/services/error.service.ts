@@ -18,23 +18,23 @@ export class ErrorService {
    * @param error The error response.
    */
   public handleError(error: HttpErrorResponse) {
+    let errorMessage = 'Something bad happened; please try again later.';
+
     if (error.error instanceof ErrorEvent) {
-      // A client-side or network error occurred. Handle it accordingly.
-      console.error(
-        'A client-side or network error occurred: ',
-        error.error.message
-      );
+      // client-side or network error
+      console.error('A client-side error occurred: ' + error.error.message);
     } else {
-      // The backend returned an unsuccessful response code.
-      // The response body may contain clues as to what went wrong,
+      // backend returned an unsuccessful response code
       console.error(
-        `Backend returned code ${error.status}, ` + `body was: ${error.error}`
+        `Backend returned code ${error.status}, body was: ${error.error}`
       );
-      if (typeof error === 'object') {
-        console.log(JSON.stringify(error));
-      }
+      errorMessage = `Server error: ${error.error}`;
     }
+
+    // log the error to the console
+    console.error(error);
+
     // return an observable with a user-facing error message
-    return throwError('Something bad happened; please try again later.');
+    return throwError(() => errorMessage);
   }
 }
