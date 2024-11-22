@@ -8,7 +8,8 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
  * <input type="text" autoFocus *ngIf="isInputVisible">.
  */
 @Directive({
-  selector: '[autoFocus]',
+    selector: '[autoFocus]',
+    standalone: false
 })
 export class AutoFocusDirective implements OnInit {
   private inputElement: HTMLElement;

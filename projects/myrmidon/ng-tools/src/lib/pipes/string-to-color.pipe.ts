@@ -21,6 +21,7 @@ import { Pipe, PipeTransform } from '@angular/core';
  */
 @Pipe({
   name: 'stringToColor',
+  standalone: false,
 })
 export class StringToColorPipe implements PipeTransform {
   // default color palette

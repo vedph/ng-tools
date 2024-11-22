@@ -10,6 +10,7 @@ import { Pipe, PipeTransform } from '@angular/core';
  */
 @Pipe({
   name: 'colorToContrast',
+  standalone: false,
 })
 export class ColorToContrastPipe implements PipeTransform {
   transform(value: string | null | undefined): string {

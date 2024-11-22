@@ -17,6 +17,7 @@ import {
  */
 @Pipe({
   name: 'safeHtml',
+  standalone: false,
 })
 export class SafeHtmlPipe implements PipeTransform {
   constructor(protected sanitizer: DomSanitizer) {}

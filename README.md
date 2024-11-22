@@ -16,6 +16,10 @@ ng build
 
 ## History
 
+### 4.0.0
+
+- 2024-11-22: ⚠️ upgraded to Angular 19.
+
 ### 3.1.1
 
 - 2024-05-24: better error handling in error service.

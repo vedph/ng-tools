@@ -13,6 +13,7 @@ import { Pipe, PipeTransform } from '@angular/core';
  */
 @Pipe({
   name: 'flatLookup',
+  standalone: false,
 })
 export class FlatLookupPipe implements PipeTransform {
   /**
